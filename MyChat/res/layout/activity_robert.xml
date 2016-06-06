@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+    <RelativeLayout
+        android:id="@+id/id_ly_top"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar" >
+         <TextView
+	        android:id="@+id/chat_title"
+	        android:layout_width="match_parent"
+	   	    android:layout_height="48dp" 
+	   	    android:text="机器人聊天对话"
+	   	    android:textSize="21sp"
+	   	    android:background="#ff33b5e5"
+	   	    android:gravity="center"/>
+    </RelativeLayout>
+	<RelativeLayout
+	    android:id="@+id/send_ly_bottom"
+	    android:layout_width="fill_parent"
+	    android:layout_height="40dp"
+	    android:layout_alignParentBottom="true"
+	    android:background="@drawable/base_comment_emo_bar">
+        <Button
+            android:id="@+id/send_msg_but"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_chat_send_selector"
+            
+            android:layout_alignParentRight="true"/>
+        <EditText
+            android:id="@+id/send_msg_input"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/send_msg_but"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edit_normal"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/chat_msg_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/id_ly_top"
+        android:layout_above="@id/send_ly_bottom"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:fadingEdgeLength="0dp"
+        android:fastScrollEnabled="true"
+        android:listSelector="@color/transparent"
+        android:paddingBottom="10dp"
+        android:transcriptMode="normal" />
+</RelativeLayout>

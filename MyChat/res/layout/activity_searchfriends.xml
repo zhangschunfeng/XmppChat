@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg_color"
+    android:orientation="vertical" >
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="48dp"
+	    android:background="@drawable/top1_bg"
+	    android:orientation="horizontal">
+		<ImageView
+		    android:id="@+id/back"
+		    android:layout_width="35dp"
+		    android:layout_height="match_parent"
+		    android:padding="6dp"
+		    android:src="@drawable/register_bottom_arrow"/>
+		<TextView
+		      style="@style/TextView_Black"
+		      android:layout_height="match_parent"
+		      android:layout_gravity="center"
+		      android:gravity="center"
+		      android:layout_centerInParent="true"
+		      android:text="查找好友"
+		       android:padding="3dp"
+		      android:textColor="#ffffff"
+		      android:textSize="20dp"/>
+	</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/TextView_Black"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/add_nick"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edit_nick"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/add_name_hint"
+            />
+        <Button
+            android:id="@+id/but_press"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingLeft="12dp"
+            android:background="@drawable/btn_login_selector"
+            android:paddingRight="12dp"
+            android:textColor="@color/base_color_text_white"
+            android:gravity="center"
+            android:text="确定"/>
+    </LinearLayout>
+	<ListView
+	    android:id="@+id/friends_list"
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"/>
+</LinearLayout>
